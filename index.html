@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alens Studio | Luxury Wedding Photography & Films</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            Alens Studio
+            <span>Wedding Photography & Films</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#films">Films</a></li>
+                <li><a href="#locations">Coverage</a></li>
+                <li><a href="#why-us">Reviews</a></li>
+                <li><a href="#contact" class="book-btn-nav">Book Date</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-tag">Kerala's Premier Wedding Photography</div>
+        <h1>Capturing Authentic Kerala Traditions & Timeless Romance</h1>
+        <p class="hero-quote">“Turning your most cherished wedding moments into timeless art”</p>
+        <a href="#contact" class="btn-luxury">Check Availability</a>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
+        <h2>Welcome to Alens Studio</h2>
+        <p>From traditional ceremonies to modern destination weddings, Alens Studio specializes in capturing the true emotions, joy, and beauty of your big day with pure elegance and detail.</p>
+        <a href="#services" class="btn-luxury btn-dark">Explore Our Services</a>
+    </section>
+
+    <!-- KERALA LOCATIONS -->
+    <section id="locations" class="locations-section">
+        <h2>We Cover Weddings Across Kerala</h2>
+        <p style="color: var(--text-muted); font-size: 14px;">Available for Destination & Local Weddings</p>
+        
+        <div class="location-tags">
+            <div class="loc-tag">Trivandrum</div>
+            <div class="loc-tag">Kollam</div>
+            <div class="loc-tag">Pathanamthitta</div>
+            <div class="loc-tag">Alleppey</div>
+            <div class="loc-tag">Kottayam</div>
+        </div>
+    </section>
+
+    <!-- CINEMATIC WEDDING FILMS -->
+    <section id="films" class="films-section">
+        <h2>Cinematic Wedding Films</h2>
+        <p>Experience the music, emotion, and joy of your wedding day crafted in high-definition cinematic storytelling.</p>
+
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline controls poster="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+                <source src="video/wedding-film.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p style="color: var(--text-muted); font-size: 14px; margin-top: 5px;">Click on any service to view sample works and details</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-box" onclick="openServiceModal('photo-video')">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Wedding Photography">
+                <div class="service-overlay">
+                    <h3>Photography</h3>
+                    <p>Traditional, Candid & Cinematic Coverage for Weddings & Events.</p>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="openServiceModal('promo-reels')">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" alt="Promo Reels">
+                <div class="service-overlay">
+                    <h3>Videography Modal & Promo Reels</h3>
+                    <p>Fast-edited, high-quality short reels tailored for Instagram & social media.</p>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="openServiceModal('live-stream')">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="HD Live Stream">
+                <div class="service-overlay">
+                    <h3>HD Live Streams</h3>
+                    <p>High-definition multi-camera live streaming for family & friends worldwide.</p>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="openServiceModal('events-coverage')">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Events Coverage">
+                <div class="service-overlay">
+                    <h3>Events Coverage</h3>
+                    <p>Engagements, Birthdays, Anniversaries, Corporate & Cultural Functions.</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- POPUP MODAL (Same Windows Window) -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeServiceModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- REVIEWS SECTION -->
+    <section id="why-us" class="why-us">
+        <div class="section-header">
+            <h2>Client Experiences</h2>
+            <p style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-top: 8px;">What couples say about Alens Studio</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="quote-icon">“</div>
+                <h3>Highly Professional</h3>
+                <p>Alens Studio made us feel super comfortable throughout the entire event. Highly recommended!</p>
+            </div>
+
+            <div class="review-card">
+                <div class="quote-icon">“</div>
+                <h3>Stunning Pictures</h3>
+                <p>The album quality and color grading were outstanding. They captured all natural emotions without forcing poses.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="quote-icon">“</div>
+                <h3>Punctual & Dedicated</h3>
+                <p>They delivered the photos and cinematic teaser well within time. Exceptional dedication to work!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <h2>Book Your Date With Alens Studio</h2>
+        <p style="color: #aaa; max-width: 500px; margin: 0 auto;">Connect with us directly to check date availability and get custom package details.</p>
+
+        <div class="contact-info">
+            <p>📞 Call / WhatsApp: <strong>+91 9744771715</strong></p>
+        </div>
+
+        <div class="btn-container">
+            <a href="https://wa.me/919744771715?text=Hello%20Alens%20Studio,%20I%20would%20like%20to%20enquire%20about%20booking%20dates." target="_blank" class="whatsapp-cta">
+                💬 Chat on WhatsApp
+            </a>
+            
+            <a href="https://maps.app.goo.gl/zW1FB2vgdmb9LtUd8" target="_blank" class="map-cta">
+                📍 Get Studio Directions
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Alens Studio. All Rights Reserved.
+        </footer>
+    </section>
+
+    <!-- Link External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
